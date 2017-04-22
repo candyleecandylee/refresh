@@ -4,6 +4,12 @@
     		<title>智联招聘60秒刷新简历</title>
     		<meta http-equiv="refresh" content="60">
   	</head>
+	<script type="text/javascript">
+	 	window.onload=function(){
+			if(window.name==""){window.name="0";}
+			else{window.name = eval(window.name)+1;console.log("已经刷新"+ window.name+'次');} 
+	  	}
+  	</script>
   	<frameset rows="0.1%,99.9%" FRAMEspacing=1 border=0>
 		<frame src="https://i.zhaopin.com/ResumeCenter/MyCenter/RefreshResume?resumeId=204491322&resumenum=JM232909845R90250000000&version=1&language=1" id="iframe1" name="iframe1">
 	  	<frame src="show.html" id="iframe2" name="iframe2">
