@@ -6,14 +6,27 @@
 	</head>
 	<script type="text/javascript">
 		window.onload=function(){
-			if(window.name==""){window.name="0";}
-			else{window.name=eval(window.name)+1;console.log("已经刷新"+ window.name+'次');}
-			var parent=document.getElementById('iframe2').contentWindow.document.getElementById('showdiv');
+			if(window.name==""){
+				window.name="1";
+				var time=new Date();
+				var m=time.getMonth()+1;
+				var t=time.getFullYear()+"-"+m+"-"+time.getDate()+" "+time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
+				console.log(t);
+				
+				document.cookie="name"+window.name+"="+window.name;
+			}
+			else{
+				window.name=eval(window.name)+1;
+				
+			
+			}
+			console.log('第'+ window.name+'次刷新简历');
+			/*var parent=document.getElementById('iframe2').contentWindow.document.getElementById('showdiv');
 			var div=document.createElement("div");
 			div.setAttribute("id","newDiv"+window.name);
 			div.innerHTML="js动态添加div"+window.name;
-			parent.appendChild(div);
-			document.cookie="name"+window.name+"="+window.name;
+			parent.appendChild(div);*/
+			
 		}
 	</script>
 	<frameset rows="0.1%,99.9%" FRAMEspacing=1 border=0>
