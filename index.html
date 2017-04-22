@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    		<title>智联招聘60秒刷新简历</title>
-    		<meta http-equiv="refresh" content="60">
-  	</head>
+    	<title>智联招聘60秒刷新简历</title>
+    	<meta http-equiv="refresh" content="60">
+	</head>
 	<script type="text/javascript">
-	 	window.onload=function(){
+		window.onload=function(){
 			if(window.name==""){window.name="0";}
-			else{window.name = eval(window.name)+1;console.log("已经刷新"+ window.name+'次');}
-			document.getElementById('iframe2').contentWindow.document.getElementById('div1').style.color='red';
-	  	}
-  	</script>
-  	<frameset rows="0.1%,99.9%" FRAMEspacing=1 border=0>
+			else{window.name=eval(window.name)+1;console.log("已经刷新"+ window.name+'次');}
+			var parent=document.getElementById('iframe2').contentWindow.document.getElementById('showdiv');
+　　　　	//添加div
+　　　　	var div=document.createElement("div");
+　　　　	//设置div属性,如id
+　　　　	div.setAttribute("id","newDiv"+window.name);
+　　　　	div.innerHTML="js动态添加div"+window.name;
+　　　　	parent.appendChild(div);
+		}
+	</script>
+	<frameset rows="0.1%,99.9%" FRAMEspacing=1 border=0>
 		<frame src="https://i.zhaopin.com/ResumeCenter/MyCenter/RefreshResume?resumeId=204491322&resumenum=JM232909845R90250000000&version=1&language=1" id="iframe1" name="iframe1">
-	  	<frame src="show.html" id="iframe2" name="iframe2">
+		<frame src="show.html" id="iframe2" name="iframe2">
   	</frameset>
+	
 </html>
+
