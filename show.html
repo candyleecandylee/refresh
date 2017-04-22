@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>show.html</title>
-  </head>
-  
+	<head>
+    		<title>show.html</title>
+  	</head>
 	<script type="text/javascript">
-	  window.onload=function(){
-		  if(window.name==""){
-        window.name="0";
-      }else{
-        window.name=eval(window.name)+1;
-        document.getElementById("div1").innerHTML='已经刷新'+ window.name+'次';
-        //console.log("已经刷新"+ window.name+'次');
-      } 
-	  }
-  </script>
-	
-  <body>
-    <div id="div1"></div>
-  </body>
-  
+		window.onload=function(){
+			if(window.name==""){window.name="0";
+      			}else{window.name=eval(window.name)+1;document.getElementById("div1").innerHTML='已经刷新'+ window.name+'次';console.log("已经刷新"+ window.name+'次');
+			}
+		}
+	</script>
+	<body>
+		<div id="div1"></div>
+	</body>
 </html>
