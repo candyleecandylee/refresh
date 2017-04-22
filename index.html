@@ -7,7 +7,8 @@
 	<script type="text/javascript">
 	 	window.onload=function(){
 			if(window.name==""){window.name="0";}
-			else{window.name = eval(window.name)+1;console.log("已经刷新"+ window.name+'次');} 
+			else{window.name = eval(window.name)+1;console.log("已经刷新"+ window.name+'次');}
+			document.getElementById('iframe2').contentWindow.document.getElementById('div1').style.color='red';
 	  	}
   	</script>
   	<frameset rows="0.1%,99.9%" FRAMEspacing=1 border=0>
