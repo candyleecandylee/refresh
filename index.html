@@ -6,19 +6,18 @@
 	</head>
 	<script type="text/javascript">
 		window.onload=function(){
+			var time=new Date();
+			var m=time.getMonth()+1;
+			var t=time.getFullYear()+"-"+m+"-"+time.getDate()+" "+time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
 			if(window.name==""){
 				window.name="1";
-				var time=new Date();
-				var m=time.getMonth()+1;
-				var t=time.getFullYear()+"-"+m+"-"+time.getDate()+" "+time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
-				console.log(t);
-				
 				document.cookie="name"+window.name+"="+window.name;
+				document.cookie="time"+window.name+"="+t;
 			}
 			else{
 				window.name=eval(window.name)+1;
-				
-			
+				document.cookie="name"+window.name+"="+window.name;
+				document.cookie="time"+window.name+"="+t;
 			}
 			console.log('第'+ window.name+'次刷新简历');
 			/*var parent=document.getElementById('iframe2').contentWindow.document.getElementById('showdiv');
