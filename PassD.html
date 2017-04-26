@@ -9,16 +9,27 @@
 	<script>
 		function encodeText(){
 			var enstr=document.getElementById("str").value;
-			var alertstr=btoa(encodeURIComponent(enstr));
-			console.log(alertstr);
+			console.log(b64Encode(enstr));
+			document.getElementById('showpanel').innerHTML = "";
+			var parent = document.getElementById('showpanel');
+			var div = document.createElement("div");
+			div.setAttribute("id", "newDiv");
+			div.innerHTML = b64Encode(enstr);
+　　　　	 parent.appendChild(div);
 		}
 		function decodeText(){
 			var destr=document.getElementById("str").value;
-			//var alertstr=decodeURIComponent(atob(destr));
-			//console.log(alertstr);
-			console.log(b64Decode('JTVCb2JqZWN0JTIwSFRNTElucHV0RWxlbWVudCU1RA=='));
 			console.log(b64Decode(destr));
+			document.getElementById('showpanel').innerHTML = "";
+			var parent = document.getElementById('showpanel');
+			var div = document.createElement("div");
+			div.setAttribute("id", "newDiv");
+			div.innerHTML = b64Decode(destr);
+　　　　	 parent.appendChild(div);
 		}
+		function b64Encode(str) {
+      		return btoa(encodeURIComponent(str));
+  		}
 		function b64Decode(str) {
       		return decodeURIComponent(atob(str));
   		}
