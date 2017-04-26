@@ -1,17 +1,19 @@
 /**
 *
-*  Encrypt encode / decode
+*  Base64 encode / decode
 *
-*  @author candy lee
-*  @date   2017-04-26
+*  @author haitao.tu
+*  @date   2010-04-26
+*  @email  tuhaitao@foxmail.com
 *
 */
  
-function Encrypt() {
-	// 私有变量
+function Base64() {
+ 
+	// private property
 	_keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
  
-	// 加密方法(公有)
+	// public method for encoding
 	this.encode = function (input) {
 		var output = "";
 		var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
@@ -37,7 +39,7 @@ function Encrypt() {
 		return output;
 	}
  
-	// 解密方法(公有)
+	// public method for decoding
 	this.decode = function (input) {
 		var output = "";
 		var chr1, chr2, chr3;
@@ -64,8 +66,9 @@ function Encrypt() {
 		return output;
 	}
  
-	// 加密方法(私有)
+	// private method for UTF-8 encoding
 	_utf8_encode = function (string) {
+		string = string.replace(/\r\n/g,"\n");
 		var utftext = "";
 		for (var n = 0; n < string.length; n++) {
 			var c = string.charCodeAt(n);
@@ -84,7 +87,7 @@ function Encrypt() {
 		return utftext;
 	}
  
-	// 解密方法(私有)
+	// private method for UTF-8 decoding
 	_utf8_decode = function (utftext) {
 		var string = "";
 		var i = 0;
