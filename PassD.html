@@ -9,13 +9,13 @@
     <script src="Enencrypt.js"></script>
 	<script>
 		function encodeText(){
-			var e=new Encrypt();
+			var e=new Base64();
 			var enstr=document.getElementById("str");
 			var alertstr=e.encode(enstr);
 			console(alertstr);
 		}
 		function decodeText(){
-			var e=new Encrypt();
+			var e=new Base64();
 			var destr=document.getElementById("str");
 			var alertstr=e.decode(enstr);
 			console(alertstr);
