@@ -16,8 +16,13 @@
 			//var destr=document.getElementById("str");
 			//var alertstr=decodeURIComponent(atob(destr));
 			//console.log(alertstr);
-			console.log(decodeURIComponent(atob('JTVCb2JqZWN0JTIwSFRNTElucHV0RWxlbWVudCU1RA==')));
+			//console.log(decodeURIComponent(atob('JTVCb2JqZWN0JTIwSFRNTElucHV0RWxlbWVudCU1RA==')));
+			console.log(b64Decode('SGVsbG8lMjBXb3JsZCElMjAlRTQlQkQlQTAlRTUlQTUlQkQlRUYlQkMlODE='));
 		}
+		function b64Decode(str) {
+      		return decodeURIComponent(atob(str));
+  		}
+  
 		
 	</script>
 </head>
