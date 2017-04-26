@@ -8,13 +8,13 @@
     <script src="bootstrap.min.js"></script>
     <script src="Enencrypt.js"></script>
 	<script>
-		function encode(){
+		function encodeText(){
 			var e=new Encrypt();
 			var enstr=document.getElementById("str");
 			var alertstr=e.encode(enstr);
 			console(alertstr);
 		}
-		function decode(){
+		function decodeText(){
 			var e=new Encrypt();
 			var destr=document.getElementById("str");
 			var alertstr=e.decode(enstr);
