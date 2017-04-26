@@ -20,6 +20,21 @@
 			var alertstr=e.decode(enstr);
 			console(alertstr);
 		}
+		
+		window.onload=function(){ 
+  			var string = 'Hello World!';
+  			console.log(btoa(string)) // "SGVsbG8gV29ybGQh"
+  			console.log(atob('SGVsbG8gV29ybGQh')) // "Hello World!"
+  			function b64Encode(str) {
+      			return btoa(encodeURIComponent(str));
+  			}
+  			function b64Decode(str) {
+      			return decodeURIComponent(atob(str));
+  			}
+  			console.log(b64Encode('Hello World! 你好！'))
+  			console.log(b64Decode('SGVsbG8lMjBXb3JsZCElMjAlRTQlQkQlQTAlRTUlQTUlQkQlRUYlQkMlODE='))
+		}
+			
 	</script>
 </head>
 <body>
