@@ -6,16 +6,30 @@
     <link rel="stylesheet" href="bootstrap.min.css">  
     <script src="jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
-    <script src="bootstrap.min.js"></script>
-	
+    <script src="Enencrypt.js"></script>
+	<script>
+		function encode(){
+			var e=new Encrypt();
+			var enstr=document.getElementById("str");
+			var alertstr=e.encode(enstr);
+			console(alertstr);
+		}
+		function decode(){
+			var e=new Encrypt();
+			var destr=document.getElementById("str");
+			var alertstr=e.decode(enstr);
+			console(alertstr);
+		}
+	</script>
 </head>
 <body>
 	<div style="padding: 50px 50px 10px;">
 		<div class="input-group">
 			<span class="input-group-addon">Text</span>
-			<input type="text" class="form-control">
+			<input type="text" class="form-control" id="str">
 		</div>
-		<button type="button" class="btn btn-primary" style="margin-top:15px">   确定   </button>
+		<button type="button" class="btn btn-primary" style="margin-top:15px" onclick="encodeText()">encode</button>
+		<button type="button" class="btn btn-primary" style="margin-top:15px" onclick="decodeText()">decode</button>
 	</div>
 	
 	<div id="showpanel"></div>
