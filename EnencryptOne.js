@@ -1,19 +1,17 @@
 /**
 *
-*  Base64 encode / decode
+*  EncryptOne encode / decode
 *
-*  @author haitao.tu
-*  @date   2010-04-26
-*  @email  tuhaitao@foxmail.com
+*  @author candy lee
+*  @date   2017-04-26
 *
 */
  
-function Base64() {
- 
-	// private property
+function EncryptOne() {
+	// 私有变量
 	_keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
  
-	// public method for encoding
+	// 加密方法(公有)
 	this.encode = function (input) {
 		var output = "";
 		var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
@@ -39,7 +37,7 @@ function Base64() {
 		return output;
 	}
  
-	// public method for decoding
+	// 解密方法(公有)
 	this.decode = function (input) {
 		var output = "";
 		var chr1, chr2, chr3;
@@ -66,7 +64,7 @@ function Base64() {
 		return output;
 	}
  
-	// private method for UTF-8 encoding
+	// 加密方法(私有)
 	_utf8_encode = function (string) {
 		string = string.replace(/\r\n/g,"\n");
 		var utftext = "";
@@ -87,7 +85,7 @@ function Base64() {
 		return utftext;
 	}
  
-	// private method for UTF-8 decoding
+	// 解密方法(私有)
 	_utf8_decode = function (utftext) {
 		var string = "";
 		var i = 0;
