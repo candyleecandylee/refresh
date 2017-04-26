@@ -1,13 +1,13 @@
 /**
 *
-*  EncryptOne encode / decode
+*  Encrypt encode / decode
 *
 *  @author candy lee
 *  @date   2017-04-26
 *
 */
  
-function EncryptOne() {
+function Encrypt() {
 	// 私有变量
 	_keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
  
