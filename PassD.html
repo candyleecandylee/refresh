@@ -8,16 +8,16 @@
     <script src="bootstrap.min.js"></script>
 	<script>
 		function encodeText(){
-			var enstr=document.getElementById("str");
+			var enstr=document.getElementById("str").value;
 			var alertstr=btoa(encodeURIComponent(enstr));
 			console.log(alertstr);
 		}
 		function decodeText(){
-			var destr=document.getElementById("str");
+			var destr=document.getElementById("str").value;
 			//var alertstr=decodeURIComponent(atob(destr));
 			//console.log(alertstr);
-			console.log(decodeURIComponent(atob('JTVCb2JqZWN0JTIwSFRNTElucHV0RWxlbWVudCU1RA==')));
-			console.log(destr);
+			console.log(b64Decode('JTVCb2JqZWN0JTIwSFRNTElucHV0RWxlbWVudCU1RA=='));
+			console.log(b64Decode(destr));
 		}
 		function b64Decode(str) {
       		return decodeURIComponent(atob(str));
