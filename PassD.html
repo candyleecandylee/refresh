@@ -13,7 +13,7 @@
 			document.getElementById('showpanel').innerHTML = "";
 			var parent = document.getElementById('showpanel');
 			var div = document.createElement("div");
-			div.setAttribute("id", "newDiv");
+			div.setAttribute("class", "panel-body");
 			div.innerHTML = b64Encode(enstr);
 　　　　	 parent.appendChild(div);
 		}
@@ -23,7 +23,7 @@
 			document.getElementById('showpanel').innerHTML = "";
 			var parent = document.getElementById('showpanel');
 			var div = document.createElement("div");
-			div.setAttribute("id", "newDiv");
+			div.setAttribute("class", "panel-body");
 			div.innerHTML = b64Decode(destr);
 　　　　	 parent.appendChild(div);
 		}
