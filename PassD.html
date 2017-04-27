@@ -14,7 +14,7 @@
 			var parent = document.getElementById('showpanel');
 			var div = document.createElement("div");
 			div.setAttribute("class", "panel-body");
-			div.innerHTML = b64Encode(enstr);
+			div.innerHTML = "encode："+b64Encode(enstr);
 　　　　	 parent.appendChild(div);
 		}
 		function decodeText(){
@@ -24,7 +24,7 @@
 			var parent = document.getElementById('showpanel');
 			var div = document.createElement("div");
 			div.setAttribute("class", "panel-body");
-			div.innerHTML = b64Decode(destr);
+			div.innerHTML "decode："+= b64Decode(destr);
 　　　　	 parent.appendChild(div);
 		}
 		function b64Encode(str) {
@@ -47,7 +47,7 @@
 		<button type="button" class="btn btn-primary" style="margin-top:15px" onclick="decodeText()">decode</button>
 	</div>
 	
-	<div style="padding: 50px 50px 10px;">
+	<div style="padding: 10px 50px 10px;">
 		<div id="showpanel" class="panel panel-default">
 		</div>
 	</div>
