@@ -40,6 +40,7 @@
                 "出错行号：" + lineNumber + "</br>" +
                 "出错列号：" + columnNumber + "</br>" +
                 "错误详情：" + errorObj + "</br></br>";
+			document.getElementById('errpanel').innerHTML = "";
 			var parent = document.getElementById('errpanel');
 			var div = document.createElement("div");
 			div.innerHTML = info+"<br>";
