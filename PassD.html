@@ -8,6 +8,7 @@
     <script src="bootstrap.min.js"></script>
 	<script>
 		function encodeText(){
+			document.getElementById('errpanel').innerHTML = "";
 			var enstr=document.getElementById("str").value;
 			console.log(b64Encode(enstr));
 			document.getElementById('showpanel').innerHTML = "";
@@ -18,6 +19,7 @@
 　　　　	 parent.appendChild(div);
 		}
 		function decodeText(){
+			document.getElementById('errpanel').innerHTML = "";
 			var destr=document.getElementById("str").value;
 			console.log(b64Decode(destr));
 			document.getElementById('showpanel').innerHTML = "";
